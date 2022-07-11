@@ -1,10 +1,12 @@
 
 
 def isFibo (valueToCheck, previousValue, currentValue):
-    if currentValue > valueToCheck:
-        return 0
-    elif valueToCheck == currentValue:
+    if valueToCheck == currentValue or valueToCheck == previousValue:
         return 1
+
+    elif currentValue > valueToCheck:
+        return 0
+
     else:
         return isFibo(valueToCheck,  currentValue, currentValue + previousValue)
 
